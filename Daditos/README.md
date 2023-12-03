@@ -7,4 +7,7 @@ using the following elements:
     - Scale to Fill
     - Aspect Fill
 - Buttons 
+    - buttons IBAction
+- Randomization in switf
+    Int.random(in: lower ... uppwer)
 
