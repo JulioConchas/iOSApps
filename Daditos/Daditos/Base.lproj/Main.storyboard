@@ -17,43 +17,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DaditoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="F5A-8c-hL7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DaditoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="F5A-8c-hL7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DaditosLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DFr-M8-qxv">
-                                <rect key="frame" x="112" y="48" width="150" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DadoUno3D" translatesAutoresizingMaskIntoConstraints="NO" id="nZj-iG-8Hk">
-                                <rect key="frame" x="52" y="273" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DadoUno3D" translatesAutoresizingMaskIntoConstraints="NO" id="lzE-eZ-mvL">
-                                <rect key="frame" x="230" y="273" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-GF-cSg">
-                                <rect key="frame" x="128" y="472" width="118" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Roll">
-                                    <color key="titleColor" red="0.086274509803921567" green="0.41176470588235292" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="plain" title="Roll">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="1" green="0.65098039220000004" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                    <color key="baseForegroundColor" red="0.086274509803921567" green="0.41176470588235292" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zg2-wh-pvY"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QUr-ca-qg0" userLabel="VerticalStack">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-kd-de0" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" image="DaditosLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DFr-M8-qxv">
+                                                <rect key="frame" x="137.5" y="57.5" width="100" height="100"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DFr-M8-qxv" firstAttribute="centerY" secondItem="bpD-kd-de0" secondAttribute="centerY" id="2Up-Wn-i6r"/>
+                                            <constraint firstItem="DFr-M8-qxv" firstAttribute="centerX" secondItem="bpD-kd-de0" secondAttribute="centerX" id="lWF-40-ywQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIj-KT-ZMx" userLabel="MiddleView">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="215"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pOW-gP-nxq" userLabel="HorizontalStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1P-tM-CJK" userLabel="LeftView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="215"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="130" placeholderIntrinsicHeight="130" image="DadoUno3D" translatesAutoresizingMaskIntoConstraints="NO" id="nZj-iG-8Hk">
+                                                                <rect key="frame" x="26.5" y="42.5" width="130" height="130"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="nZj-iG-8Hk" firstAttribute="centerY" secondItem="w1P-tM-CJK" secondAttribute="centerY" id="tGI-EQ-Z9S"/>
+                                                            <constraint firstItem="nZj-iG-8Hk" firstAttribute="centerX" secondItem="w1P-tM-CJK" secondAttribute="centerX" id="uNJ-70-OdY"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amY-gW-MjJ" userLabel="RoghtView">
+                                                        <rect key="frame" x="192.5" y="0.0" width="182.5" height="215"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="130" placeholderIntrinsicHeight="130" image="DadoUno3D" translatesAutoresizingMaskIntoConstraints="NO" id="lzE-eZ-mvL">
+                                                                <rect key="frame" x="26.5" y="42.5" width="130" height="130"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="lzE-eZ-mvL" firstAttribute="centerX" secondItem="amY-gW-MjJ" secondAttribute="centerX" id="8kc-VP-mHc"/>
+                                                            <constraint firstItem="lzE-eZ-mvL" firstAttribute="centerY" secondItem="amY-gW-MjJ" secondAttribute="centerY" id="CBU-hb-cJk"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pOW-gP-nxq" secondAttribute="trailing" id="EdW-pw-Mud"/>
+                                            <constraint firstAttribute="bottom" secondItem="pOW-gP-nxq" secondAttribute="bottom" id="Wtq-ug-ml2"/>
+                                            <constraint firstItem="pOW-gP-nxq" firstAttribute="top" secondItem="JIj-KT-ZMx" secondAttribute="top" id="hLY-eH-Uzw"/>
+                                            <constraint firstItem="pOW-gP-nxq" firstAttribute="leading" secondItem="JIj-KT-ZMx" secondAttribute="leading" id="mPe-8A-7Lq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMt-oh-Jcp" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="432" width="375" height="215"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-GF-cSg">
+                                                <rect key="frame" x="147.5" y="87.5" width="80" height="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Roll">
+                                                    <color key="titleColor" red="0.086274509803921567" green="0.41176470588235292" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="plain" title="Roll">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="1" green="0.65098039220000004" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                    <color key="baseForegroundColor" red="0.086274509803921567" green="0.41176470588235292" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zg2-wh-pvY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hOS-GF-cSg" firstAttribute="centerX" secondItem="rMt-oh-Jcp" secondAttribute="centerX" id="Ey5-Gf-Pbh"/>
+                                            <constraint firstItem="hOS-GF-cSg" firstAttribute="centerY" secondItem="rMt-oh-Jcp" secondAttribute="centerY" id="x1G-Qg-cJ5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F5A-8c-hL7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ART-pm-fNt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QUr-ca-qg0" secondAttribute="bottom" id="CwD-Zw-nmY"/>
+                            <constraint firstItem="QUr-ca-qg0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EAq-bc-MES"/>
+                            <constraint firstItem="QUr-ca-qg0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K5R-tl-RQ0"/>
+                            <constraint firstItem="F5A-8c-hL7" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="ajl-ht-k8i"/>
+                            <constraint firstItem="F5A-8c-hL7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pT8-zZ-U4D"/>
+                            <constraint firstItem="F5A-8c-hL7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="t5X-k8-SPL"/>
+                            <constraint firstItem="QUr-ca-qg0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xe0-wu-ZKK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dadoImageViewOne" destination="nZj-iG-8Hk" id="5Co-Vf-iSt"/>

@@ -17,17 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DaditoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JoU-0p-47O">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DaditoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JoU-0p-47O">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoNameLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7E8-7n-cGM">
-                                <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="250" insetsLayoutMarginsFromSafeArea="NO" image="NoNameLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7E8-7n-cGM">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learng and Build!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-bY-SD7">
+                                <rect key="frame" x="112.5" y="408.5" width="150" height="32"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sKL-bY-SD7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6mu-Md-80y"/>
+                            <constraint firstItem="sKL-bY-SD7" firstAttribute="top" secondItem="7E8-7n-cGM" secondAttribute="baseline" constant="-50" id="9d4-Nt-Ybm"/>
+                            <constraint firstItem="JoU-0p-47O" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Kmn-U6-njR"/>
+                            <constraint firstItem="7E8-7n-cGM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OI2-Hq-TNo"/>
+                            <constraint firstItem="JoU-0p-47O" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="Yni-7C-wDH"/>
+                            <constraint firstItem="JoU-0p-47O" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="ceb-Rr-Tvj"/>
+                            <constraint firstItem="7E8-7n-cGM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sqe-tu-puD"/>
+                            <constraint firstItem="JoU-0p-47O" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="yLv-ml-iyT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
