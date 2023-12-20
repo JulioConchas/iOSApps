@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KlS-ar-3mQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxW-Yj-vhK" userLabel="C Key">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOY-Vq-vTr">
+                                                <rect key="frame" x="2" y="0.0" width="371" height="91"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="C">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61w-wP-yds"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VOY-Vq-vTr" firstAttribute="top" secondItem="RxW-Yj-vhK" secondAttribute="top" id="6Qa-Me-nhp"/>
+                                            <constraint firstAttribute="trailing" secondItem="VOY-Vq-vTr" secondAttribute="trailing" constant="2" id="Q46-cO-hM7"/>
+                                            <constraint firstItem="VOY-Vq-vTr" firstAttribute="leading" secondItem="RxW-Yj-vhK" secondAttribute="leading" constant="2" id="ga2-nx-aDc"/>
+                                            <constraint firstAttribute="bottom" secondItem="VOY-Vq-vTr" secondAttribute="bottom" id="v7n-CF-tdM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-VW-rAB" userLabel="D Key">
+                                        <rect key="frame" x="0.0" y="96" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-ro-dIF">
+                                                <rect key="frame" x="4" y="0.0" width="367" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="D">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="net-F7-5hp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Rze-ro-dIF" secondAttribute="bottom" id="Dwd-L3-uVO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rze-ro-dIF" secondAttribute="trailing" constant="4" id="Krp-SV-fYt"/>
+                                            <constraint firstItem="Rze-ro-dIF" firstAttribute="leading" secondItem="TzH-VW-rAB" secondAttribute="leading" constant="4" id="Vda-Zh-sbt"/>
+                                            <constraint firstItem="Rze-ro-dIF" firstAttribute="top" secondItem="TzH-VW-rAB" secondAttribute="top" id="rfE-bb-flU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-Y7-HyE" userLabel="E Key">
+                                        <rect key="frame" x="0.0" y="192" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-bT-Ay2">
+                                                <rect key="frame" x="6" y="0.0" width="363" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="E">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxC-bf-ku0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NXx-bT-Ay2" secondAttribute="bottom" id="F5Q-5k-QZg"/>
+                                            <constraint firstItem="NXx-bT-Ay2" firstAttribute="leading" secondItem="ed9-Y7-HyE" secondAttribute="leading" constant="6" id="Rfd-Us-gkp"/>
+                                            <constraint firstItem="NXx-bT-Ay2" firstAttribute="top" secondItem="ed9-Y7-HyE" secondAttribute="top" id="eqN-OE-ptZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="NXx-bT-Ay2" secondAttribute="trailing" constant="6" id="kAf-QE-Krf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1du-ME-gWV" userLabel="F Key">
+                                        <rect key="frame" x="0.0" y="288" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZk-p0-pLF">
+                                                <rect key="frame" x="8" y="0.0" width="359" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="F">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nc6-zg-cOd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xZk-p0-pLF" secondAttribute="bottom" id="WkG-Q4-9FO"/>
+                                            <constraint firstItem="xZk-p0-pLF" firstAttribute="leading" secondItem="1du-ME-gWV" secondAttribute="leading" constant="8" id="bKO-e0-lOB"/>
+                                            <constraint firstItem="xZk-p0-pLF" firstAttribute="top" secondItem="1du-ME-gWV" secondAttribute="top" id="ePD-H8-R9w"/>
+                                            <constraint firstAttribute="trailing" secondItem="xZk-p0-pLF" secondAttribute="trailing" constant="8" id="iLb-1o-dQB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ7-xF-ms5" userLabel="G Key">
+                                        <rect key="frame" x="0.0" y="384" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ka-nJ-Y3m">
+                                                <rect key="frame" x="10" y="0.0" width="355" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="G">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFg-1D-lkU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1Ka-nJ-Y3m" secondAttribute="bottom" id="1Tl-rF-kU7"/>
+                                            <constraint firstItem="1Ka-nJ-Y3m" firstAttribute="leading" secondItem="bQ7-xF-ms5" secondAttribute="leading" constant="10" id="7QZ-Cs-8Um"/>
+                                            <constraint firstItem="1Ka-nJ-Y3m" firstAttribute="top" secondItem="bQ7-xF-ms5" secondAttribute="top" id="OLV-iF-Wz1"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ka-nJ-Y3m" secondAttribute="trailing" constant="10" id="k1N-8u-27r"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzY-yw-Tuf" userLabel="B Key">
+                                        <rect key="frame" x="0.0" y="480" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-T8-a5X">
+                                                <rect key="frame" x="12" y="0.0" width="351" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="A">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBz-7j-0N0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7SJ-T8-a5X" secondAttribute="bottom" id="6MR-2A-TDR"/>
+                                            <constraint firstItem="7SJ-T8-a5X" firstAttribute="leading" secondItem="zzY-yw-Tuf" secondAttribute="leading" constant="12" id="Iis-F5-AdZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="7SJ-T8-a5X" secondAttribute="trailing" constant="12" id="pIR-nT-CWe"/>
+                                            <constraint firstItem="7SJ-T8-a5X" firstAttribute="top" secondItem="zzY-yw-Tuf" secondAttribute="top" id="pMD-Hd-nYp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1a-e1-iZw" userLabel="A Key">
+                                        <rect key="frame" x="0.0" y="576" width="375" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54U-o1-f4G">
+                                                <rect key="frame" x="14" y="0.0" width="347" height="91"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="B">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OjM-wT-foG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="54U-o1-f4G" firstAttribute="top" secondItem="u1a-e1-iZw" secondAttribute="top" id="5AI-CJ-dm6"/>
+                                            <constraint firstAttribute="trailing" secondItem="54U-o1-f4G" secondAttribute="trailing" constant="14" id="9hQ-df-Dft"/>
+                                            <constraint firstAttribute="bottom" secondItem="54U-o1-f4G" secondAttribute="bottom" id="c11-bg-xGx"/>
+                                            <constraint firstItem="54U-o1-f4G" firstAttribute="leading" secondItem="u1a-e1-iZw" secondAttribute="leading" constant="14" id="hDA-lE-VTD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.80392156862745101" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KlS-ar-3mQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="1Hd-oZ-szA"/>
+                            <constraint firstItem="KlS-ar-3mQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RzW-bI-o6M"/>
+                            <constraint firstAttribute="trailing" secondItem="KlS-ar-3mQ" secondAttribute="trailing" id="U0N-LO-7xj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KlS-ar-3mQ" secondAttribute="bottom" id="qGJ-3V-Pwd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
