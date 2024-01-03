@@ -13,6 +13,7 @@
 		499A62002B335F68008A772B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499A61FE2B335F68008A772B /* Main.storyboard */; };
 		499A62022B335F69008A772B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499A62012B335F69008A772B /* Assets.xcassets */; };
 		499A62052B335F69008A772B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499A62032B335F69008A772B /* LaunchScreen.storyboard */; };
+		499A620D2B460D32008A772B /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 499A620C2B460D32008A772B /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		499A62012B335F69008A772B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		499A62042B335F69008A772B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		499A62062B335F69008A772B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		499A620C2B460D32008A772B /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		499A61F72B335F68008A772B /* EggTimer */ = {
 			isa = PBXGroup;
 			children = (
+				499A620C2B460D32008A772B /* alarm_sound.mp3 */,
 				499A61F82B335F68008A772B /* AppDelegate.swift */,
 				499A61FA2B335F68008A772B /* SceneDelegate.swift */,
 				499A61FC2B335F68008A772B /* ViewController.swift */,
@@ -127,6 +130,7 @@
 			files = (
 				499A62052B335F69008A772B /* LaunchScreen.storyboard in Resources */,
 				499A62022B335F69008A772B /* Assets.xcassets in Resources */,
+				499A620D2B460D32008A772B /* alarm_sound.mp3 in Resources */,
 				499A62002B335F68008A772B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
