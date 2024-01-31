@@ -2,6 +2,7 @@
 
 leasons for this project 
 - Learn to use UISliders.
+-- Format String with : String(format:"%.xf",Float)
 - Create Swift Classes.
 - Understand the difference between Classes and Structs.
 - Learn to create UI programmatically without Storyboards.

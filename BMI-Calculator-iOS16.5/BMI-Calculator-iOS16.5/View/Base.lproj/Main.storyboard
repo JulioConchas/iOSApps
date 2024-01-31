@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator_iOS16_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Awi-Zc-xKu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G01-pN-1GI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculate Your BMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-yg-rvy">
+                                        <rect key="frame" x="94" y="8" width="187.5" height="429"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <color key="textColor" red="0.88235294117647056" green="0.90980392156862744" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-A0-QHF">
+                                        <rect key="frame" x="14" y="439" width="347" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxj-pR-fR5">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <color key="textColor" red="0.88235294119999996" green="0.90980392160000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.50m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGw-aL-S8z">
+                                                <rect key="frame" x="298.5" y="0.0" width="48.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <color key="textColor" red="0.88235294119999996" green="0.90980392160000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="T0V-zn-65b"/>
+                                        </constraints>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="hDa-DG-2h0">
+                                        <rect key="frame" x="6" y="461" width="363" height="51"/>
+                                        <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="z92-sL-E5L"/>
+                                        </constraints>
+                                        <color key="thumbTintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="heightSladerChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="gVS-HF-KbT"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-Zo-eNT">
+                                        <rect key="frame" x="10.5" y="513" width="354" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkQ-hE-TUd">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <color key="textColor" red="0.88235294119999996" green="0.90980392160000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-Z8-kGp">
+                                                <rect key="frame" x="302" y="0.0" width="52" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <color key="textColor" red="0.88235294119999996" green="0.90980392160000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="i2B-Ed-SxG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-1W-zYj">
+                                        <rect key="frame" x="6" y="535" width="363" height="51"/>
+                                        <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vLp-WD-x1e"/>
+                                        </constraints>
+                                        <color key="thumbTintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="weightSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="y5K-Qi-wXZ"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRm-En-xTq">
+                                        <rect key="frame" x="87.5" y="587" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qlv-lO-JRd"/>
+                                            <constraint firstAttribute="width" constant="200" id="bKq-xP-bkT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculate">
+                                            <backgroundConfiguration key="background" cornerRadius="50">
+                                                <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tth-Ku-mh2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9dF-yg-rvy" secondAttribute="trailing" id="37a-c9-yNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="PbZ-A0-QHF" secondAttribute="trailing" id="7Es-gT-kV1"/>
+                                    <constraint firstItem="aeM-1W-zYj" firstAttribute="leading" secondItem="G01-pN-1GI" secondAttribute="leading" id="BZo-4R-HYg"/>
+                                    <constraint firstItem="hDa-DG-2h0" firstAttribute="leading" secondItem="G01-pN-1GI" secondAttribute="leading" id="D5b-Pi-lX6"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDa-DG-2h0" secondAttribute="trailing" id="cxg-Eq-ZKa"/>
+                                    <constraint firstAttribute="trailing" secondItem="aeM-1W-zYj" secondAttribute="trailing" id="hiD-90-4Lg"/>
+                                    <constraint firstItem="9dF-yg-rvy" firstAttribute="leading" secondItem="G01-pN-1GI" secondAttribute="leading" id="t1Q-hl-N7g"/>
+                                    <constraint firstItem="PbZ-A0-QHF" firstAttribute="leading" secondItem="G01-pN-1GI" secondAttribute="leading" id="u1b-B2-jcG"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="10" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G01-pN-1GI" secondAttribute="trailing" id="C3e-vk-NWF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Awi-Zc-xKu" secondAttribute="bottom" id="VB8-Sw-J4p"/>
+                            <constraint firstItem="Awi-Zc-xKu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bUW-HH-wtx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Awi-Zc-xKu" secondAttribute="trailing" id="cAc-Xn-ZVH"/>
+                            <constraint firstItem="G01-pN-1GI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dHx-Ze-Hlv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G01-pN-1GI" secondAttribute="bottom" id="eYM-TT-uZ9"/>
+                            <constraint firstItem="Awi-Zc-xKu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o0X-Oj-qJW"/>
+                            <constraint firstItem="G01-pN-1GI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ru9-Ew-f8g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="PGw-aL-S8z" id="G2o-Ab-80K"/>
+                        <outlet property="heightSlider" destination="hDa-DG-2h0" id="RYU-o4-d4A"/>
+                        <outlet property="weightLabel" destination="9Ht-Z8-kGp" id="HPh-lL-XLV"/>
+                        <outlet property="weightSlider" destination="aeM-1W-zYj" id="P3E-gB-9bG"/>
+                        <segue destination="XFh-83-b18" kind="presentation" identifier="goToResult" id="gZk-OD-5qa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="eAU-hM-XDb">
+            <objects>
+                <viewController id="XFh-83-b18" customClass="ResultsViewController" customModule="BMI_Calculator_iOS16_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LHn-XE-TIT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkg_2" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-O3-Zwq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kAI-0q-Oqo">
+                                <rect key="frame" x="66.5" y="262" width="242.5" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-0B-pMp">
+                                        <rect key="frame" x="8" y="8" width="226.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fs-0n-fxN">
+                                        <rect key="frame" x="70" y="48" width="102" height="45"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxO-Ls-7dU">
+                                        <rect key="frame" x="69" y="93" width="104" height="20"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="10" right="8"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVm-PC-Vr2">
+                                <rect key="frame" x="87.5" y="587" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="n7E-ek-5kL"/>
+                                    <constraint firstAttribute="width" constant="200" id="rZy-lp-J0X"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Recalculate">
+                                    <backgroundConfiguration key="background" cornerRadius="50">
+                                        <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculate:" destination="XFh-83-b18" eventType="touchUpInside" id="fAf-6a-5Hg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="daO-2D-fGD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kAI-0q-Oqo" firstAttribute="centerX" secondItem="LHn-XE-TIT" secondAttribute="centerX" id="YNK-nK-qPU"/>
+                            <constraint firstItem="daO-2D-fGD" firstAttribute="bottom" secondItem="XVm-PC-Vr2" secondAttribute="bottom" constant="10" id="koQ-HY-Odd"/>
+                            <constraint firstItem="XVm-PC-Vr2" firstAttribute="centerX" secondItem="LHn-XE-TIT" secondAttribute="centerX" id="nbW-xV-z9i"/>
+                            <constraint firstItem="kAI-0q-Oqo" firstAttribute="centerY" secondItem="LHn-XE-TIT" secondAttribute="centerY" id="q0k-uh-jdK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="dxO-Ls-7dU" id="61t-uw-ZEa"/>
+                        <outlet property="bmiLabel" destination="9fs-0n-fxN" id="hnf-ls-X5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atb-vA-wIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="341" height="341"/>
+        <image name="bkg_2" width="341" height="341"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
