@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
-    var bmi = ""
+    // var bmi = ""
+    var calculatorBrain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,8 @@ class ViewController: UIViewController {
         let weight = weightSlider.value
         
         // print("IBM = \(String(format:"%.2f",(weight/pow(heigth,2))))")
-        bmi = String(format:"%.1f",(weight/pow(heigth,2)))
+        // bmi = String(format:"%.1f",(weight/pow(heigth,2)))
+        calculatorBrain.calculateBMI(heigth: heigth, weight: weight)
         
 //        let secondVC = SecondViewController()
 //        secondVC.bmiValue = String(format:"%.1f",(weight/pow(heigth,2)))
@@ -53,8 +55,11 @@ class ViewController: UIViewController {
     {
         if segue.identifier == "goToResult"
         {
-            let desticationVC = segue.destination as! ResultsViewController // Downcasting, ! means force Downcast
-            desticationVC.bmiValue = bmi
+            let destinationVC = segue.destination as! ResultsViewController // Downcasting, ! means force Downcast
+            // destinationVC.bmiValue = bmi
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
 }

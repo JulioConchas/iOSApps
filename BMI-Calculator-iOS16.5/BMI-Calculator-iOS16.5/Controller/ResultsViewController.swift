@@ -14,12 +14,17 @@ class ResultsViewController: UIViewController
     @IBOutlet weak var bmiLabel: UILabel!
     
     var bmiValue : String?
+    var advice : String?
+    var color : UIColor?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         bmiLabel.text = bmiValue
+        adviceLabel.text = advice
+        print(color)
+        self.view.backgroundColor = color
     }
     
 
