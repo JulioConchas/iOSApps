@@ -69,10 +69,12 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8T-Wa-hSd">
-                                                        <rect key="frame" x="195" y="0.0" width="20" height="22"/>
+                                                        <rect key="frame" x="195" y="0.0" width="20" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="x7U-29-TwV"/>
+                                                            <constraint firstAttribute="height" constant="30" id="zHG-0k-1Sa"/>
                                                         </constraints>
+                                                        <edgeInsets key="layoutMargins" top="10" left="8" bottom="8" right="8"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -147,22 +149,23 @@
                     <connections>
                         <outlet property="defFriendBill" destination="mKk-d6-V4u" id="jgQ-ay-Ugl"/>
                         <outlet property="defFriendName" destination="8iG-9U-uSp" id="iHM-4N-n2Y"/>
+                        <segue destination="MRz-wq-lwB" kind="presentation" identifier="goToResult" id="u9G-3m-xiK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="-27"/>
+            <point key="canvasLocation" x="118" y="-44"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="xIH-ax-t5D">
             <objects>
                 <viewController id="MRz-wq-lwB" customClass="ResultViewController" customModule="FriendsBill_iOS16_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r3V-Mr-0Fm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mzz-Kz-pOW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wc-DO-BKy" userLabel="headView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -192,7 +195,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oo6-HE-ZAh" userLabel="SettingView">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="400"/>
+                                        <rect key="frame" x="0.0" y="200" width="375" height="350"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIb-Pb-Qwc">
                                                 <rect key="frame" x="123.5" y="20" width="128.5" height="26.5"/>
@@ -203,24 +206,27 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="Xuf-Pz-86n"/>
+                                            <constraint firstAttribute="height" constant="350" id="Xuf-Pz-86n"/>
                                             <constraint firstItem="WIb-Pb-Qwc" firstAttribute="top" secondItem="Oo6-HE-ZAh" secondAttribute="top" constant="20" id="ZnE-3i-Hge"/>
                                             <constraint firstItem="WIb-Pb-Qwc" firstAttribute="centerX" secondItem="Oo6-HE-ZAh" secondAttribute="centerX" id="j6K-im-u5b"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-OO-jOO" userLabel="btnView">
-                                        <rect key="frame" x="0.0" y="600" width="375" height="67"/>
+                                        <rect key="frame" x="0.0" y="550" width="375" height="97"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHe-pn-IUh">
-                                                <rect key="frame" x="131.5" y="16.5" width="112" height="34.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHe-pn-IUh">
+                                                <rect key="frame" x="131.5" y="0.0" width="112" height="34.5"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="20" right="8"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Recalculate"/>
+                                                <connections>
+                                                    <action selector="recalculatePressed:" destination="MRz-wq-lwB" eventType="touchUpInside" id="My9-ji-CcK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="zHe-pn-IUh" firstAttribute="centerX" secondItem="gBN-OO-jOO" secondAttribute="centerX" id="Xju-eR-FSu"/>
-                                            <constraint firstItem="zHe-pn-IUh" firstAttribute="centerY" secondItem="gBN-OO-jOO" secondAttribute="centerY" id="bnA-e3-EkI"/>
+                                            <constraint firstItem="zHe-pn-IUh" firstAttribute="centerX" secondItem="gBN-OO-jOO" secondAttribute="centerX" id="syY-l4-OBX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -245,6 +251,10 @@
                             <constraint firstItem="mzz-Kz-pOW" firstAttribute="leading" secondItem="LME-mV-cjU" secondAttribute="leading" id="rWk-m6-j4C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingLabel" destination="WIb-Pb-Qwc" id="ql6-Xm-1Ne"/>
+                        <outlet property="totalLabel" destination="eft-yb-bAo" id="JoT-fx-p0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMA-fa-fJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

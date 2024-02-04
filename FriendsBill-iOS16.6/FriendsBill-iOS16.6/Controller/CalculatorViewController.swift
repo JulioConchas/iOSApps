@@ -42,8 +42,16 @@ class CalculatorViewController: UIViewController {
     @IBAction func calculateBill(_ sender: UIButton) 
     {
         print("Calculate Friends bill")
-        print("Friend name: \(defFriendName.text) , $\(defFriendBill.text)")
+        //print("Friend name: \(defFriendName.text) , $\(defFriendBill.text)")
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) 
+    {
+        if segue.identifier == "goToResult"
+        {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.totalAmount = defFriendBill.text
+        }
+    }
 }
 
