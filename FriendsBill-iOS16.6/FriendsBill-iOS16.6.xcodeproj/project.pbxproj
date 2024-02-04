@@ -44,6 +44,7 @@
 		49CF63752B6F09B5004D0949 = {
 			isa = PBXGroup;
 			children = (
+				49CF639A2B6F1E60004D0949 /* README.md */,
 				49CF63802B6F09B5004D0949 /* FriendsBill-iOS16.6 */,
 				49CF637F2B6F09B5004D0949 /* Products */,
 			);
@@ -68,7 +69,6 @@
 				49CF638A2B6F09B6004D0949 /* Assets.xcassets */,
 				49CF638C2B6F09B6004D0949 /* LaunchScreen.storyboard */,
 				49CF638F2B6F09B6004D0949 /* Info.plist */,
-				49CF639A2B6F1E60004D0949 /* README.md */,
 			);
 			path = "FriendsBill-iOS16.6";
 			sourceTree = "<group>";
