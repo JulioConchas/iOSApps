@@ -16,7 +16,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        totalLabel.text = totalAmount
+        totalLabel.text = "$\(totalAmount ?? "total Amount")"
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton)

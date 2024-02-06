@@ -17,6 +17,9 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        defFriendName.text = ""
+        defFriendBill.text = ""
         // Do any additional setup after loading the view.
     }
 
