@@ -4,10 +4,12 @@
 //
 //  Created by Julio Conchas on 03/02/24.
 //
+// 02/05/2024 Julio Conchas Adding delegate function for TextFields
+//
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
 
     /**
             Default Friend fields only one friend
@@ -18,9 +20,8 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defFriendName.text = ""
-        defFriendBill.text = ""
-        // Do any additional setup after loading the view.
+        defFriendBill.delegate = self
+        defFriendName.delegate = self
     }
 
     @IBAction func addFriend(_ sender: UIButton) 
@@ -44,8 +45,10 @@ class CalculatorViewController: UIViewController {
     }
     @IBAction func calculateBill(_ sender: UIButton) 
     {
+        defFriendName.endEditing(true)
+        defFriendBill.endEditing(true)
         print("Calculate Friends bill")
-        //print("Friend name: \(defFriendName.text) , $\(defFriendBill.text)")
+
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) 
@@ -55,6 +58,31 @@ class CalculatorViewController: UIViewController {
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.totalAmount = defFriendBill.text
         }
+    }
+    
+    /**
+            TextField delegate methods
+     */
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool 
+    {
+        textField.endEditing(true)
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != ""
+        {
+            return true
+        }
+        else
+        {
+            textField.placeholder = "Field cannot be empty"
+            return false
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) 
+    {
+        // Use defFriendName and bill here to get the split bill
+        textField.text = ""
     }
 }
 
