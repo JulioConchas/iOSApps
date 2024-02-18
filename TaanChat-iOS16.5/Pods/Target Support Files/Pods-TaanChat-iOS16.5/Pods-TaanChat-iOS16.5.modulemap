@@ -1,0 +1,6 @@
+framework module Pods_TaanChat_iOS16_5 {
+  umbrella header "Pods-TaanChat-iOS16.5-umbrella.h"
+
+  export *
+  module * { export * }
+}

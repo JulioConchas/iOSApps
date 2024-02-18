@@ -1,0 +1,9 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '16.5'
+
+target 'TaanChat-iOS16.5' do
+  use_frameworks!
+  pod 'CLTypingLabel'	
+  # Pods for TaanChat-iOS16.5
+
+end

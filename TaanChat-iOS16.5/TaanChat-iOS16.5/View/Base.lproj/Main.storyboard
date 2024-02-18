@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" T'aan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSV-bF-VW6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" T'aan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSV-bF-VW6" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="52" y="303.5" width="271" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ZbX-Cb-sei"/>
@@ -78,8 +78,8 @@
         <!--Register View Controller-->
         <scene sceneID="mS7-Tp-cyl">
             <objects>
-                <viewController id="bgQ-Bt-5zD" userLabel="Register View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mGZ-qO-Z9T">
+                <viewController id="bgQ-Bt-5zD" userLabel="Register View Controller" customClass="RegisterViewController" customModule="TaanChat_iOS16_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGZ-qO-Z9T" customClass="Register">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -113,6 +113,9 @@
                                         <rect key="frame" x="0.0" y="106" width="375" height="71"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="bgQ-Bt-5zD" eventType="touchUpInside" id="aiG-Hp-4vM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,6 +145,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="qak-xQ-sFT"/>
                     <connections>
+                        <outlet property="emailTextField" destination="lUh-VN-hSE" id="c93-yI-bPT"/>
+                        <outlet property="passwordTextField" destination="P4G-pl-cBC" id="29P-BJ-fMj"/>
                         <segue destination="M7T-kO-dn2" kind="show" identifier="RegisterToChat" id="zxx-KQ-PvM"/>
                     </connections>
                 </viewController>
@@ -152,7 +157,7 @@
         <!--Login View Controller-->
         <scene sceneID="Yvw-Ab-FKf">
             <objects>
-                <viewController id="GDB-tg-6Bn" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="GDB-tg-6Bn" userLabel="Login View Controller" customClass="LoginViewController" customModule="TaanChat_iOS16_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aW1-iD-TpT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +165,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ga-lV-bql" userLabel="EmailView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="177"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-Ff-7Xc" userLabel="Email TextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-Ff-7Xc" userLabel="Email TextField">
                                         <rect key="frame" x="48" y="50" width="279" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -178,7 +183,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-4X-JvT" userLabel="PasswordView">
                                 <rect key="frame" x="0.0" y="161" width="375" height="177"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJi-rn-lKA" userLabel="Password TextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJi-rn-lKA" userLabel="Password TextField">
                                         <rect key="frame" x="49" y="30" width="278" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -187,6 +192,9 @@
                                         <rect key="frame" x="0.0" y="106" width="375" height="71"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="GDB-tg-6Bn" eventType="touchUpInside" id="vUU-Wk-fuY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -216,6 +224,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="PXF-k9-iqn"/>
                     <connections>
+                        <outlet property="emailTextField" destination="wzt-Ff-7Xc" id="mSf-0o-zwJ"/>
+                        <outlet property="passwordTextField" destination="eJi-rn-lKA" id="zDa-yY-FWA"/>
                         <segue destination="M7T-kO-dn2" kind="show" identifier="LoginToChat" id="fBE-Qs-4SR"/>
                     </connections>
                 </viewController>
@@ -226,7 +236,7 @@
         <!--Chat View Controller-->
         <scene sceneID="UvX-V5-sXC">
             <objects>
-                <viewController id="M7T-kO-dn2" userLabel="Chat View Controller" sceneMemberID="viewController">
+                <viewController id="M7T-kO-dn2" userLabel="Chat View Controller" customClass="ChatViewController" customModule="TaanChat_iOS16_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDO-Zv-815">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +302,13 @@
                             <constraint firstItem="WXl-Te-4B1" firstAttribute="leading" secondItem="jy1-UO-Cci" secondAttribute="leading" id="zAa-BQ-wcc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hYr-Um-2Wr"/>
+                    <navigationItem key="navigationItem" id="hYr-Um-2Wr">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="frI-wc-onX">
+                            <connections>
+                                <action selector="logOutPressed:" destination="M7T-kO-dn2" id="xAL-xG-2xN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvo-rb-rk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,7 +334,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zxx-KQ-PvM"/>
+        <segue reference="fBE-Qs-4SR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
