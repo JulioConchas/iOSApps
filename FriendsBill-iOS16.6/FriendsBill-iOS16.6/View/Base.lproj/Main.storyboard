@@ -71,7 +71,7 @@
         <!--Login View Controller-->
         <scene sceneID="kjD-pU-N0Z">
             <objects>
-                <viewController id="OOf-Pl-zvB" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="OOf-Pl-zvB" userLabel="Login View Controller" customClass="LoginViewController" customModule="FriendsBill_iOS16_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5S-hU-9Fz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="70a-Ce-O7Q">
                                 <rect key="frame" x="0.0" y="94" width="375" height="122.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Hv-gn-AuE">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Hv-gn-AuE">
                                         <rect key="frame" x="62.5" y="0.0" width="250" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="O7A-3Z-bg2"/>
@@ -87,18 +87,21 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-wc-gwi">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-wc-gwi">
                                         <rect key="frame" x="62.5" y="44" width="250" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="n90-xS-VA6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMt-il-dc6">
                                         <rect key="frame" x="152.5" y="88" width="70.5" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginBtn:" destination="OOf-Pl-zvB" eventType="touchUpInside" id="ehm-UA-2Ch"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -113,6 +116,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5AV-Si-FCd"/>
                     <connections>
+                        <outlet property="emailTextField" destination="2Hv-gn-AuE" id="fYA-EQ-6cz"/>
+                        <outlet property="pwdTextField" destination="o9c-wc-gwi" id="uwG-OB-4rj"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginToCalculator" id="Rxz-NJ-R0h"/>
                     </connections>
                 </viewController>
@@ -123,7 +128,7 @@
         <!--Register View Controller-->
         <scene sceneID="6E6-yS-faf">
             <objects>
-                <viewController id="veP-9D-0x0" userLabel="Register View Controller" sceneMemberID="viewController">
+                <viewController id="veP-9D-0x0" userLabel="Register View Controller" customClass="RegisterViewController" customModule="FriendsBill_iOS16_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o30-sz-ZDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,12 +150,15 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="glt-9m-Pya"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdH-wg-0Hq">
                                         <rect key="frame" x="144" y="88" width="87" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                        <connections>
+                                            <action selector="registerBtn:" destination="veP-9D-0x0" eventType="touchUpInside" id="9Df-UV-LSk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -165,6 +173,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="yOP-9C-k0D"/>
                     <connections>
+                        <outlet property="emailTextField" destination="syj-Xp-yn1" id="Fc9-wY-2Pm"/>
+                        <outlet property="pwdTextField" destination="xhf-n4-ov5" id="7Kg-kl-WeK"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="RegisterToCalculator" id="cgD-7q-01m"/>
                     </connections>
                 </viewController>
@@ -189,17 +199,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hSe-Hv-tr1">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4H-DI-TOG">
-                                                        <rect key="frame" x="134" y="0.0" width="107.5" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="YBh-ce-VDY"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First add your friends and their bills." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auT-eA-OmX">
-                                                        <rect key="frame" x="37" y="50" width="301.5" height="50"/>
+                                                        <rect key="frame" x="37" y="0.0" width="301.5" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Znh-uT-Cy9"/>
                                                         </constraints>
@@ -309,7 +310,13 @@
                             <constraint firstAttribute="trailing" secondItem="nrL-r1-q6j" secondAttribute="trailing" id="woa-0o-0jI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1pV-CD-7Dc"/>
+                    <navigationItem key="navigationItem" id="1pV-CD-7Dc">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="CfU-gW-Wf2">
+                            <connections>
+                                <action selector="logOutBtn:" destination="BYZ-38-t0r" id="1tO-k6-mAV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="defFriendBill" destination="mKk-d6-V4u" id="jgQ-ay-Ugl"/>
                         <outlet property="defFriendName" destination="8iG-9U-uSp" id="iHM-4N-n2Y"/>

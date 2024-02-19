@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,11 +20,26 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "💰Friend Bill"
+        navigationItem.hidesBackButton = true
         
         defFriendBill.delegate = self
         defFriendName.delegate = self
     }
-
+    @IBAction func logOutBtn(_ sender: UIBarButtonItem) 
+    {
+        do
+        {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        }
+        catch let signOutError as NSError
+        {
+            print("ERROR: CalculatorViewController: SignOut: %@",signOutError)
+        }
+    }
+    
     @IBAction func addFriend(_ sender: UIButton) 
     {
         let friendField = UITextField()
