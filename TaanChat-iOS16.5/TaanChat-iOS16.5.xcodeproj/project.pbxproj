@@ -44,6 +44,7 @@
 		49CF64532B819D1F004D0949 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF64522B819D1F004D0949 /* RegisterViewController.swift */; };
 		49CF64552B81A175004D0949 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF64542B81A175004D0949 /* LoginViewController.swift */; };
 		49CF64572B81A81E004D0949 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF64562B81A81E004D0949 /* ChatViewController.swift */; };
+		49CF646D2B82EE35004D0949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF646C2B82EE35004D0949 /* Constants.swift */; };
 		D9DE9F309081A61B63051FD7 /* Pods_TaanChat_iOS16_5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82B063D8A2022F3E9D10BA2 /* Pods_TaanChat_iOS16_5.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		49CF64522B819D1F004D0949 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		49CF64542B81A175004D0949 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49CF64562B81A81E004D0949 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		49CF646C2B82EE35004D0949 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A82B063D8A2022F3E9D10BA2 /* Pods_TaanChat_iOS16_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaanChat_iOS16_5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9B78CC21BA0BAEB19CA18C /* Pods-TaanChat-iOS16.5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaanChat-iOS16.5.release.xcconfig"; path = "Target Support Files/Pods-TaanChat-iOS16.5/Pods-TaanChat-iOS16.5.release.xcconfig"; sourceTree = "<group>"; };
 		B83E85DB84E3945280A1AFFC /* Pods-TaanChat-iOS16.5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaanChat-iOS16.5.debug.xcconfig"; path = "Target Support Files/Pods-TaanChat-iOS16.5/Pods-TaanChat-iOS16.5.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				49CF640D2B7D123F004D0949 /* LaunchScreen.storyboard */,
 				49CF64102B7D123F004D0949 /* Info.plist */,
 				49CF64192B819A73004D0949 /* GoogleService-Info.plist */,
+				49CF646C2B82EE35004D0949 /* Constants.swift */,
 			);
 			path = "TaanChat-iOS16.5";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				49CF64032B7D123D004D0949 /* AppDelegate.swift in Sources */,
 				49CF64052B7D123D004D0949 /* SceneDelegate.swift in Sources */,
 				49CF64552B81A175004D0949 /* LoginViewController.swift in Sources */,
+				49CF646D2B82EE35004D0949 /* Constants.swift in Sources */,
 				49CF64572B81A81E004D0949 /* ChatViewController.swift in Sources */,
 				49CF64532B819D1F004D0949 /* RegisterViewController.swift in Sources */,
 			);

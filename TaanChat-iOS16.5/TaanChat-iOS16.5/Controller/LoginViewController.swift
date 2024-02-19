@@ -17,7 +17,7 @@ class LoginViewController: UIViewController
     
     @IBAction func loginPressed(_ sender: UIButton) 
     {
-        Auth.auth().signIn(withEmail: emailTextField.text ?? EMPTY_STR, password: passwordTextField.text ?? EMPTY_STR ) { authResult, error in
+        Auth.auth().signIn(withEmail: emailTextField.text ?? Constants.EMPTY_STR, password: passwordTextField.text ?? Constants.EMPTY_STR ) { authResult, error in
             if let e = error
             {
                 print("ERROR:LoginViewController:\(e)")
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController
             else
             {
                 // No errors, Navigate to ChatViewControler
-                self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                self.performSegue(withIdentifier: Constants.LOGIN_SEGUE, sender: self)
             }
         }
     }

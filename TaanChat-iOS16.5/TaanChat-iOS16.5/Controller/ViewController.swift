@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 //            charIndex += 1
 //        }
         // MARK: - Animation for title using cocopods and external library
-        titleLabel.text = "📣 T'aan"
+        titleLabel.text = Constants.APP_NAME
     }
 
 

@@ -21,7 +21,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "💰Friend Bill"
+        title = Constants.APP_NAME
         navigationItem.hidesBackButton = true
         
         defFriendBill.delegate = self

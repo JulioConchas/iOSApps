@@ -12,7 +12,7 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "📣 T'aan"
+        title = Constants.APP_NAME
         navigationItem.hidesBackButton = true
 
     }

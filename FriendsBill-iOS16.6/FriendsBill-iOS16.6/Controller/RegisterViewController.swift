@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
                 else
                 {
                     // No errors, Navigate to CalculatorView
-                    self.performSegue(withIdentifier: "RegisterToCalculator", sender: self)
+                    self.performSegue(withIdentifier: Constants.REGISTER_TO_CALCULATOR_SEGUE, sender: self)
                 }
             }
         }

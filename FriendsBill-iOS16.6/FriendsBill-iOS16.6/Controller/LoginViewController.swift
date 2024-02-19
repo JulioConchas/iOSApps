@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
                 else
                 {
                     // No errors, Navigate to calculator
-                    self.performSegue(withIdentifier: "LoginToCalculator", sender: self)
+                    self.performSegue(withIdentifier: Constants.LOGIN_TO_CALCULATOR_SEGUE, sender: self)
                 }
             }
         }

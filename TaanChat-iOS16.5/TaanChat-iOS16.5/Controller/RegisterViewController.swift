@@ -12,12 +12,10 @@ class RegisterViewController: UIViewController
 {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    let EMPTY_STR = "empty"
-    
+
     @IBAction func registerPressed(_ sender: UIButton) 
     {
-        Auth.auth().createUser(withEmail: emailTextField.text ?? EMPTY_STR, password: passwordTextField.text ?? EMPTY_STR) { authResult, error in
+        Auth.auth().createUser(withEmail: emailTextField.text ?? Constants.EMPTY_STR, password: passwordTextField.text ?? Constants.EMPTY_STR) { authResult, error in
             if let e = error
             {
                 print("ERROR:RegisterViewController:\(e.localizedDescription)")
@@ -25,7 +23,7 @@ class RegisterViewController: UIViewController
             else
             {
                 // No errors, Navigate to ChatViewControler
-                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                self.performSegue(withIdentifier: Constants.REGISTER_SEGUE, sender: self)
             }
         }
     }

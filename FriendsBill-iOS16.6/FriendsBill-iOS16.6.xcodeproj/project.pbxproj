@@ -24,6 +24,7 @@
 		49CF64662B82DB22004D0949 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 49CF64652B82DB22004D0949 /* FirebaseAppCheck */; };
 		49CF64682B82DBF7004D0949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */; };
 		49CF646B2B82E3C0004D0949 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 49CF646A2B82E3C0004D0949 /* FirebaseAuth */; };
+		49CF646F2B82F058004D0949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF646E2B82F058004D0949 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		49CF64582B82D936004D0949 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49CF645A2B82D942004D0949 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		49CF646E2B82F058004D0949 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				49CF638C2B6F09B6004D0949 /* LaunchScreen.storyboard */,
 				49CF638F2B6F09B6004D0949 /* Info.plist */,
 				49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */,
+				49CF646E2B82F058004D0949 /* Constants.swift */,
 			);
 			path = "FriendsBill-iOS16.6";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				49CF63822B6F09B5004D0949 /* AppDelegate.swift in Sources */,
 				49CF63842B6F09B5004D0949 /* SceneDelegate.swift in Sources */,
 				49CF645B2B82D942004D0949 /* RegisterViewController.swift in Sources */,
+				49CF646F2B82F058004D0949 /* Constants.swift in Sources */,
 				49CF64592B82D936004D0949 /* LoginViewController.swift in Sources */,
 				49CF63992B6F1BD0004D0949 /* ResultViewController.swift in Sources */,
 			);
