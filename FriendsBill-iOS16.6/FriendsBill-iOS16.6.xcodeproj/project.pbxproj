@@ -25,6 +25,10 @@
 		49CF64682B82DBF7004D0949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */; };
 		49CF646B2B82E3C0004D0949 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 49CF646A2B82E3C0004D0949 /* FirebaseAuth */; };
 		49CF646F2B82F058004D0949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF646E2B82F058004D0949 /* Constants.swift */; };
+		49CF647D2B83A5F3004D0949 /* GoogleService-Info.plist_tmp in Resources */ = {isa = PBXBuildFile; fileRef = 49CF647C2B83A5F3004D0949 /* GoogleService-Info.plist_tmp */; };
+		49CF64812B9517FE004D0949 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF64802B9517FE004D0949 /* Friend.swift */; };
+		49CF64842B951C80004D0949 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF64822B951C80004D0949 /* FriendCell.swift */; };
+		49CF64852B951C80004D0949 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CF64832B951C80004D0949 /* FriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +44,12 @@
 		49CF639A2B6F1E60004D0949 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		49CF64582B82D936004D0949 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49CF645A2B82D942004D0949 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FriendsBill-iOS16.6/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		49CF646E2B82F058004D0949 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		49CF647C2B83A5F3004D0949 /* GoogleService-Info.plist_tmp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "GoogleService-Info.plist_tmp"; sourceTree = "<group>"; };
+		49CF64802B9517FE004D0949 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		49CF64822B951C80004D0949 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		49CF64832B951C80004D0949 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 				49CF638F2B6F09B6004D0949 /* Info.plist */,
 				49CF64672B82DBF7004D0949 /* GoogleService-Info.plist */,
 				49CF646E2B82F058004D0949 /* Constants.swift */,
+				49CF647C2B83A5F3004D0949 /* GoogleService-Info.plist_tmp */,
 			);
 			path = "FriendsBill-iOS16.6";
 			sourceTree = "<group>";
@@ -99,6 +108,7 @@
 		49CF63952B6F09D9004D0949 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49CF64802B9517FE004D0949 /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				49CF63872B6F09B5004D0949 /* Main.storyboard */,
+				49CF64822B951C80004D0949 /* FriendCell.swift */,
+				49CF64832B951C80004D0949 /* FriendCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CF638E2B6F09B6004D0949 /* LaunchScreen.storyboard in Resources */,
+				49CF647D2B83A5F3004D0949 /* GoogleService-Info.plist_tmp in Resources */,
 				49CF638B2B6F09B6004D0949 /* Assets.xcassets in Resources */,
+				49CF64852B951C80004D0949 /* FriendCell.xib in Resources */,
 				49CF64682B82DBF7004D0949 /* GoogleService-Info.plist in Resources */,
 				49CF639B2B6F1E60004D0949 /* README.md in Resources */,
 				49CF63892B6F09B5004D0949 /* Main.storyboard in Resources */,
@@ -217,9 +231,11 @@
 				49CF63822B6F09B5004D0949 /* AppDelegate.swift in Sources */,
 				49CF63842B6F09B5004D0949 /* SceneDelegate.swift in Sources */,
 				49CF645B2B82D942004D0949 /* RegisterViewController.swift in Sources */,
+				49CF64842B951C80004D0949 /* FriendCell.swift in Sources */,
 				49CF646F2B82F058004D0949 /* Constants.swift in Sources */,
 				49CF64592B82D936004D0949 /* LoginViewController.swift in Sources */,
 				49CF63992B6F1BD0004D0949 /* ResultViewController.swift in Sources */,
+				49CF64812B9517FE004D0949 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

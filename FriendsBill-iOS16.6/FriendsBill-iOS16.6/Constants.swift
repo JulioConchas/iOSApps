@@ -11,4 +11,8 @@ struct Constants
     //SEGUEs
     static let REGISTER_TO_CALCULATOR_SEGUE = "RegisterToCalculator"
     static let LOGIN_TO_CALCULATOR_SEGUE = "LoginToCalculator"
+    
+    // MARK: - TableView Constants
+    static let CELL_IDENTIFIER = "ReusableCell"
+    static let CELL_NIB_NAME = "FriendCell"
 }

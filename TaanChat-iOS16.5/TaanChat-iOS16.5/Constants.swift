@@ -11,4 +11,13 @@ struct Constants
     static let LOGIN_SEGUE = "LoginToChat"
     
     static let EMPTY_STR = "empty"
+    
+    static let CELL_IDENTIFIER = "ReusableCell"
+    static let CELL_NIB_NAME = "MessageCell"
+    
+    // DB Constants
+    static let COLLECTION_NAME = "messages"
+    static let SENDER_FIELD = "sender"
+    static let BODY_FIELD = "body"
+    static let DATE_FIELD = "date"
 }

@@ -9,14 +9,77 @@ import UIKit
 import Firebase
 
 class ChatViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    let db = Firestore.firestore()
+    
+    var messages : [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         title = Constants.APP_NAME
         navigationItem.hidesBackButton = true
-
+        
+        //Register table cell Nib
+        tableView.register(UINib(nibName: Constants.CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: Constants.CELL_IDENTIFIER)
+        
+        loadMessages()
+        
     }
-    @IBAction func logOutPressed(_ sender: UIBarButtonItem) 
+    func loadMessages()
+    {
+       // db.collection(Constants.COLLECTION_NAME).getDocuments { (querySnapshot, error ) in
+        db.collection(Constants.COLLECTION_NAME).order(by: Constants.DATE_FIELD).addSnapshotListener { (querySnapshot, error ) in
+            if let e = error
+            {
+                print("There wasa an issue retrieving data from Firestore : \(e)")
+            }
+            else
+            {
+                // lean the dummy messages
+                self.messages = []
+                
+                if let snapshotDocuments = querySnapshot?.documents
+                {
+                    for doc in snapshotDocuments
+                    {
+                        let data = doc.data()
+                        if let sender = data[Constants.SENDER_FIELD] as? String, let body = data[Constants.BODY_FIELD] as? String
+                        {
+                            self.messages.append(Message(sender: sender, body: body))
+                            DispatchQueue.main.async // <=== Most for update GUI
+                            {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @IBAction func sendPressed(_ sender: UIButton)
+    {
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email
+        {
+            db.collection(Constants.COLLECTION_NAME).addDocument(data: [Constants.SENDER_FIELD : messageSender, Constants.BODY_FIELD : messageBody, Constants.DATE_FIELD : Date().timeIntervalSince1970]) {
+                (error) in
+                if let e = error
+                {
+                    print("There was an issue saving data to firestore: \(e)")
+                }
+                else
+                {
+                    print("Successfully saved date.")
+                }
+            }
+        }
+    }
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem)
     {
         do 
         {
@@ -27,5 +90,28 @@ class ChatViewController: UIViewController {
         {
             print("Error signing out: %@",signOutError)
         }
+    }
+}
+// MARK: - UITableViewDataSource
+extension ChatViewController: UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CELL_IDENTIFIER, for: indexPath) as! MessageCell
+        //cell.textLabel?.text = messages[indexPath.row].body
+        cell.label.text = messages[indexPath.row].body
+        return cell
+    }
+}
+// MARK: - UITableViewDelegate
+extension ChatViewController: UITableViewDelegate
+{
+    // This delegate is used to Interact with eatch cell by clicing
+    // It will not be used for this app
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
