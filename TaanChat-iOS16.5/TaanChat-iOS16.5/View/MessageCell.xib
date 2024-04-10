@@ -12,21 +12,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="67" id="KGk-i7-Jjw" customClass="MessageCell" customModule="TaanChat_iOS16_5" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="297" height="67"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="113" id="KGk-i7-Jjw" customClass="MessageCell" customModule="TaanChat_iOS16_5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="297" height="67"/>
+                <rect key="frame" x="0.0" y="0.0" width="431" height="113"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-qF-DEA">
-                        <rect key="frame" x="10" y="10" width="275" height="47"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-qF-DEA">
+                        <rect key="frame" x="10" y="0.0" width="375" height="67.666666666666671"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kcH-fF-nS6">
+                                <rect key="frame" x="10" y="25.333333333333329" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageReference key="image" image="trash.fill" catalog="system" symbolScale="small" variableValue="1"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-4k-PmW">
-                                <rect key="frame" x="0.0" y="0.0" width="225" height="47"/>
+                                <rect key="frame" x="60" y="23.999999999999996" width="265" height="43.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDT-ny-CVb">
-                                        <rect key="frame" x="10" y="10" width="205" height="27"/>
+                                        <rect key="frame" x="10" y="10.000000000000002" width="245" height="23.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray5Color"/>
                                         <nil key="highlightedColor"/>
@@ -37,38 +42,42 @@
                                     <constraint firstItem="cDT-ny-CVb" firstAttribute="top" secondItem="0oe-4k-PmW" secondAttribute="top" constant="10" id="0KF-UR-FJJ"/>
                                     <constraint firstItem="cDT-ny-CVb" firstAttribute="leading" secondItem="0oe-4k-PmW" secondAttribute="leading" constant="10" id="UBh-NV-lpH"/>
                                     <constraint firstAttribute="bottom" secondItem="cDT-ny-CVb" secondAttribute="bottom" constant="10" id="am3-8a-WMf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="oNm-Nf-dT3"/>
                                     <constraint firstAttribute="trailing" secondItem="cDT-ny-CVb" secondAttribute="trailing" constant="10" id="qnL-LA-kP6"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="F3D-dm-SQz">
-                                <rect key="frame" x="235" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="335" y="25.333333333333329" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <imageReference key="image" image="arrow.up.trash.fill" catalog="system" symbolScale="small" variableValue="1"/>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="F3D-dm-SQz" firstAttribute="leading" secondItem="0oe-4k-PmW" secondAttribute="trailing" constant="10" id="Qcd-PL-aJY"/>
+                            <constraint firstItem="0oe-4k-PmW" firstAttribute="leading" secondItem="kcH-fF-nS6" secondAttribute="trailing" constant="10" id="R7t-h8-tft"/>
                         </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="FuZ-qF-DEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Im4-D9-V5m"/>
                     <constraint firstItem="FuZ-qF-DEA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ytz-dW-y8o"/>
                     <constraint firstAttribute="bottom" secondItem="FuZ-qF-DEA" secondAttribute="bottom" constant="10" id="fAC-ul-YaY"/>
-                    <constraint firstItem="FuZ-qF-DEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jNl-M9-YmY"/>
                     <constraint firstAttribute="trailing" secondItem="FuZ-qF-DEA" secondAttribute="trailing" constant="10" id="wLF-Pt-Kj9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="cDT-ny-CVb" id="dUS-vb-oB0"/>
+                <outlet property="leftImageView" destination="kcH-fF-nS6" id="DdX-mY-lfu"/>
                 <outlet property="messageBubble" destination="0oe-4k-PmW" id="bfL-Md-PrP"/>
                 <outlet property="rightImageView" destination="F3D-dm-SQz" id="rY3-n4-dt6"/>
             </connections>
-            <point key="canvasLocation" x="28.244274809160306" y="-3.1690140845070425"/>
+            <point key="canvasLocation" x="64.885496183206101" y="13.028169014084508"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="arrow.up.trash.fill" catalog="system" width="117" height="128"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

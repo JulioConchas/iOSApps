@@ -26,6 +26,18 @@ class CalculatorViewController: UIViewController {
         
         tableView.register(UINib(nibName: Constants.CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: Constants.CELL_IDENTIFIER)
     }
+    @IBAction func addFriendBtn(_ sender: UIButton) 
+    {
+        friends.append(Friend())
+        DispatchQueue.main.async
+        {
+            self.tableView.reloadData()
+        }
+    }
+    @IBAction func calculateBtn(_ sender: UIButton) 
+    {
+
+    }
 }
 // MARK: - UITableViewDataSource
 extension CalculatorViewController: UITableViewDataSource
