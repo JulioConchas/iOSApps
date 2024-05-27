@@ -21,7 +21,7 @@ class BottomButton extends StatelessWidget {
         ),
         color: Color(bottomColor),
         margin: EdgeInsets.only(top: 10.0),
-        padding: EdgeInsets.only(bottom: 20.0),
+        padding: EdgeInsets.only(bottom: 10.0),
         width: double.infinity,
         height: bottomHeight,
       ),
