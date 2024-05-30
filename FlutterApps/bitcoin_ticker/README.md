@@ -65,3 +65,8 @@ samples, guidance on mobile development, and a full API reference.
     - choose bettween platforms we can use ('dart:io' show Platform;) library and 
     - if (Platform.isIOS) or if Platform.android
     - we can use ternary operator in Container child
+
+* Level 1:
+    - use CoinAPI.io to gete data for excanche rates
+    - get an API KEY for free
+    
