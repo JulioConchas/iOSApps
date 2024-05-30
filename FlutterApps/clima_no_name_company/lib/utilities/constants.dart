@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 String kOpenWeatherAPIUtl = "https://api.openweathermap.org/data/2.5/weather?";
-String kOpenWeatherAPIKey = "<openWeatherAPIKey>";
+String kOpenWeatherAPIKey = "328a3533fbb88e2b042bc5ff5b81f773";
 
 // Colors
 Color kCloudyWeatherColor = Color(0xFFD7F1FF);
